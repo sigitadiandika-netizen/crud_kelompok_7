@@ -16,3 +16,8 @@ Route::get('/kendaraan/create', [KendaraanController::class, 'create'])
 Route::post('/kendaraan', [KendaraanController::class, 'store'])
     ->name('kendaraan.store');
 
+Route::get('/kendaraan/{id}/edit', [KendaraanController::class, 'edit'])
+    ->name('kendaraan.edit');
+
+Route::put('/kendaraan/{id}', [KendaraanController::class, 'update'])
+    ->name('kendaraan.update');

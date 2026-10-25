@@ -1,4 +1,7 @@
-<nav>
-    <a href="{{ route('kendaraan.index') }}">Daftar Kendaraan</a>
+<nav class="navbar navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="{{ route('kendaraan.index') }}">
+            Manajemen Kendaraan
+        </a>
+    </div>
 </nav>
-<hr>

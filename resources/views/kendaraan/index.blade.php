@@ -11,7 +11,7 @@
             <p class="text-secondary mb-0">Kelola data kendaraan.</p>
         </div>
 
-        <a href="#" class="btn btn-primary">
+        <a href="{{ route('kendaraan.create') }}" class="btn btn-primary">
             + Tambah Kendaraan
         </a>
     </div>

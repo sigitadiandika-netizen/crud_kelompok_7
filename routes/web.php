@@ -21,3 +21,6 @@ Route::get('/kendaraan/{id}/edit', [KendaraanController::class, 'edit'])
 
 Route::put('/kendaraan/{id}', [KendaraanController::class, 'update'])
     ->name('kendaraan.update');
+
+Route::delete('/kendaraan/{id}', [KendaraanController::class, 'destroy'])
+    ->name('kendaraan.destroy');

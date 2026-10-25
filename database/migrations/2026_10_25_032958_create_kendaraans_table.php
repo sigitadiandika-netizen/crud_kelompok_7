@@ -12,9 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('kendaraans', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+        $table->id();
+        $table->string('nomor_polisi')->unique();
+        $table->string('merek');
+        $table->string('tipe');
+        $table->string('kategori');
+        $table->unsignedInteger('tahun');
+        $table->string('warna');
+        $table->text('keterangan')->nullable();
+        $table->timestamps();
+    });
     }
 
     /**

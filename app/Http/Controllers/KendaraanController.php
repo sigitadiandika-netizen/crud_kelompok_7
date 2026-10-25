@@ -66,4 +66,14 @@ class KendaraanController extends Controller
         ->with('success', 'Data kendaraan berhasil diperbarui.');
     }
 
+public function destroy(string $id)
+{
+    $kendaraan = Kendaraan::findOrFail($id);
+
+    $kendaraan->delete();
+
+    return redirect()
+        ->route('kendaraan.index')
+        ->with('success', 'Data kendaraan berhasil dihapus.');
+}
 }

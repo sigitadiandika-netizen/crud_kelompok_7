@@ -7,4 +7,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/kendaraan', [KendaraanController::class, 'index']);
+Route::get('/kendaraan', [KendaraanController::class, 'index'])
+    ->name('kendaraan.index');

@@ -9,3 +9,10 @@ Route::get('/', function () {
 
 Route::get('/kendaraan', [KendaraanController::class, 'index'])
     ->name('kendaraan.index');
+
+Route::get('/kendaraan/create', [KendaraanController::class, 'create'])
+    ->name('kendaraan.create');
+
+Route::post('/kendaraan', [KendaraanController::class, 'store'])
+    ->name('kendaraan.store');
+

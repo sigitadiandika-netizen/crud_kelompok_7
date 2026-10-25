@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,6 +6,14 @@
     <title>@yield('title', 'Manajemen Kendaraan')</title>
 </head>
 <body>
-    @yield('content')
+
+    @include('layouts.navbar')
+
+    <main>
+        @yield('content')
+    </main>
+
+    @include('layouts.footer')
+
 </body>
 </html>

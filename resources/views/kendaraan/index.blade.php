@@ -1,21 +1,15 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manajemen Kendaraan</title>
-</head>
-<body>
+@extends('layouts.main')
+
+@section('title', 'Daftar Kendaraan')
+
+@section('content')
     <h1>Manajemen Kendaraan</h1>
-
-    <p>Halaman pengelolaan data kendaraan.</p>
-
-    <h2>Daftar Kendaraan</h2>
+    <p>Berikut adalah daftar kendaraan yang terdaftar.</p>
 
     <table border="1" cellpadding="8" cellspacing="0">
         <thead>
             <tr>
-                <th>No.</th>
+                <th>No</th>
                 <th>Nomor Polisi</th>
                 <th>Merek</th>
                 <th>Tipe</th>
@@ -25,7 +19,6 @@
                 <th>Keterangan</th>
             </tr>
         </thead>
-
         <tbody>
             @forelse ($kendaraans as $kendaraan)
                 <tr>
@@ -45,5 +38,4 @@
             @endforelse
         </tbody>
     </table>
-</body>
-</html>
+@endsection

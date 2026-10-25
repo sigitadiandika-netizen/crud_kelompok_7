@@ -9,9 +9,9 @@ class KendaraanController extends Controller
 {
     public function index()
     {
-        $kendaraans = Kendaraan::latest()->get();
+    $kendaraans = Kendaraan::latest()->paginate(10);
 
-        return view('kendaraan.index', compact('kendaraans'));
+    return view('kendaraan.index', compact('kendaraans'));
     }
 
     public function create()

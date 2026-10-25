@@ -61,12 +61,24 @@
                                 <td>{{ $kendaraan->tahun }}</td>
                                 <td>{{ $kendaraan->warna }}</td>
                                 <td>{{ $kendaraan->keterangan ?? '-' }}</td>
-
                                 <td>
-                                    <a href="{{ route('kendaraan.edit', $kendaraan->id) }}"
-                                        class="btn btn-warning btn-sm">
-                                        Edit
-                                    </a>
+                                    <div class="d-flex gap-1">
+                                        <a href="{{ route('kendaraan.edit', $kendaraan->id) }}"
+                                            class="btn btn-warning btn-sm">
+                                            Edit
+                                        </a>
+
+                                        <form action="{{ route('kendaraan.destroy', $kendaraan->id) }}"
+                                            method="POST"
+                                            onsubmit="return confirm('Yakin ingin menghapus kendaraan ini?')">
+                                            @csrf
+                                            @method('DELETE')
+
+                                            <button type="submit" class="btn btn-danger btn-sm">
+                                                Hapus
+                                            </button>
+                                        </form>
+                                    </div>
                                 </td>
                             </tr>
                         @empty

@@ -51,7 +51,7 @@
                     <tbody>
                         @forelse ($kendaraans as $kendaraan)
                             <tr>
-                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $kendaraans->firstItem() + $loop->index }}</td>
                                 <td class="fw-semibold">
                                     {{ $kendaraan->nomor_polisi }}
                                 </td>
@@ -94,7 +94,7 @@
                 <div class="mt-3">
                     {{ $kendaraans->links('pagination::bootstrap-5') }}
                 </div>
-                
+
             </div>
         </div>
     </div>
